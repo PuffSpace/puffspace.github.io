@@ -292,6 +292,135 @@ a:hover { color: var(--blue-dark); }
 }
 .site-footer nav { display: flex; gap: 14px; flex-wrap: wrap; margin-left: auto; }
 
+/* Subproject homepages with sidebar nav (html#project-main) */
+
+html#project-main body {
+	height: 100%;
+	max-width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	display: table;
+	padding: 0;
+	margin: 0;
+}
+
+html#project-main nav,
+html#project-main article,
+html#project-main figure,
+html#project-main aside {
+	display: table-cell;
+	padding: 4px;
+}
+
+html#project-main nav,
+html#project-main figure {
+	border-right: 11px solid;
+	background-color: #6BBDD6;
+	border-color: #007B9C;
+}
+
+html#project-main nav header {
+	margin: 0;
+	font-size: 15pt;
+	font-weight: bolder;
+	white-space: nowrap;
+}
+
+html#project-main nav ul {
+	margin-top: 0;
+	margin-bottom: 1em;
+	padding-left: 0;
+}
+
+html#project-main nav li {
+	list-style-type: none;
+	list-style-position: inside;
+	margin-left: 0.5em;
+}
+
+html#project-main article h2 {
+	margin: 0;
+	text-align: center;
+}
+
+html#project-main main,
+html#project-main footer {
+	display: table-row;
+}
+
+html#project-main nav {
+	vertical-align: top;
+}
+
+html#project-main figure,
+html#project-main aside {
+	vertical-align: bottom;
+}
+
+#callout {
+	color: #E00000;
+	font-weight: bold;
+	text-align: center;
+}
+
+.not-openbsd #callout {
+	color: #0000A0;
+	font-weight: normal;
+}
+
+@media (max-width: 768px) {
+	html#project-main body {
+		position: static;
+		display: block;
+	}
+
+	html#project-main main,
+	html#project-main footer {
+		display: flex;
+		flex-direction: column;
+	}
+
+	html#project-main nav,
+	html#project-main article,
+	html#project-main figure,
+	html#project-main aside {
+		display: block;
+	}
+
+	html#project-main article,
+	html#project-main aside {
+		order: 1;
+	}
+
+	html#project-main nav,
+	html#project-main figure {
+		order: 2;
+		text-align: center;
+	}
+
+	html#project-main nav {
+		border: solid #007B9C;
+		border-width: 11px 0;
+	}
+
+	html#project-main figure {
+		background-color: #FFFFFF;
+		border: none;
+	}
+
+	html#project-main nav header {
+		white-space: normal;
+	}
+
+	html#project-main article h2 img {
+		height: auto;
+		max-width: 100%;
+	}
+}
+
 /* Content pages (converted legacy pages) */
 
 .page { padding: 36px 0 8px; }
