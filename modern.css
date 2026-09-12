@@ -96,6 +96,18 @@ a:hover { color: var(--blue-dark); }
 }
 .site-nav a.cta:hover { background: var(--accent-dark); }
 
+/* Unofficial community notice */
+
+.unofficial {
+	max-width: var(--maxw);
+	margin: 14px auto 0;
+	padding: 8px 20px;
+	font-size: 0.82rem;
+	color: var(--muted);
+	text-align: center;
+}
+.unofficial strong { color: var(--fg); font-weight: 700; }
+
 /* Layout */
 
 .wrap {
