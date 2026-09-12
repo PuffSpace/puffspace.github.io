@@ -1,120 +1,139 @@
 <!doctype html>
-<html lang=en id=project-main>
-	<meta charset=utf-8>
-	<title>OpenBSD</title>
-	<meta name="description" content="the main OpenBSD page">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="canonical" href="https://www.openbsd.org/">
-	<link rel="stylesheet" href="openbsd.css">
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<html lang=en>
+<meta charset=utf-8>
+<title>OpenBSD — Free, Secure UNIX-like OS</title>
+<meta name="description" content="OpenBSD: a free, multi-platform 4.4BSD-based UNIX-like operating system focused on portability, correctness, proactive security and integrated cryptography.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://www.openbsd.org/">
+<link rel="stylesheet" href="modern.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-<main>
-<nav>
+<a class="skip" href="#main">Skip to content</a>
 
-<header>About OpenBSD</header>
-<ul>
-	<li><a href="goals.html">Project Goals</a>
-	<li><a href="plat.html">Hardware Platforms</a>
-	<li><a href="security.html">Security</a>
-	    <a href="crypto.html">Crypto</a>
-	<li><a href="events.html">Events and Papers</a>
-	<li><a href="innovations.html">Innovations</a>
-</ul>
-
-<header>Getting OpenBSD</header>
-<ul>
-	<li><a href="faq/faq4.html#Download">Download</a>
-</ul>
-
-<header>Getting Source</header>
-<ul>
-	<li><a href="anoncvs.html">AnonCVS</a>
-	<li><a href="https://cvsweb.openbsd.org/">CVSWeb</a>
-	<li><a href="https://github.com/openbsd">GitHub Mirror</a>
-	<li><a href="https://openbsd.gothub.org">GotHub Mirror</a>
-</ul>
-
-<header>OpenBSD Resources</header>
-<ul>
-	<li><a href="plus.html">Changelog</a>
-	<li><a href="faq/index.html">FAQ</a>
-	<li><a href="https://man.openbsd.org">Manual Pages</a>
-	<li><a href="errata79.html">Patches</a>
-	<li><a href="report.html">Reporting Problems</a>
-	<li><a href="mail.html">Mailing Lists</a>
-	<li><a href="lyrics.html">Songs</a> &amp;
-            <a href="artwork.html">Artwork</a>
-	<li><a href="hackathons.html">Hackathons</a>
-	<li><a href="groups.html">User Groups</a>
-	<li><a href="support.html">Commercial Support</a>
-</ul>
-
-<header>Supporting OpenBSD</header>
-<ul>
-	<li><a href="donations.html">Donations</a><br>
-	<li><a href="https://openbsdstore.com/">Art Merchandise</a>
-	<li><a href="https://www.openbsdfoundation.org/"><i>OpenBSD
-	    Foundation</i></a>
-</ul>
-
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="index.html"><i>Open</i><b>BSD</b></a>
+<nav class="site-nav" aria-label="Primary">
+<a href="faq/faq4.html#Download">Download</a>
+<a href="faq/index.html">FAQ</a>
+<a href="plus.html">Changelog</a>
+<a href="https://man.openbsd.org">Manuals</a>
+<a class="cta" href="donations.html">Donate</a>
 </nav>
-<article>
+</div>
+</header>
 
-<h2>
-	<a href="79.html">
-	<img src="images/puffy79.gif" alt="[OpenBSD 7.9]" height=198 width=599>
-	</a>
-</h2>
+<main id="main">
+<div class="hero">
+<div>
+<p class="badge">OpenBSD 7.9 — 60th release · May 19, 2026</p>
+<h1>A free, secure UNIX-like operating system.</h1>
+<p class="lede">
+The OpenBSD project produces a <strong>FREE</strong>, multi-platform
+4.4BSD-based UNIX-like OS. We emphasize portability, standardization,
+correctness, <a href="security.html">proactive security</a> and
+<a href="crypto.html">integrated cryptography</a>.
+<a href="https://www.openssh.com">OpenSSH</a> comes from OpenBSD.
+</p>
+<div class="actions">
+<a class="btn btn-primary" href="faq/faq4.html#Download">Download OpenBSD</a>
+<a class="btn btn-ghost" href="79.html">Release notes</a>
+</div>
+<p class="callout">Only two remote holes in the default install, in a heck of a long time!</p>
+</div>
+<figure class="hero-art">
+<a href="79.html"><img src="images/puffy79.gif" alt="OpenBSD 7.9 release artwork" width=599 height=198></a>
+<figcaption>7.9 song: “Diamond in the Rough” — artwork by Lyra Henderson.</figcaption>
+</figure>
+</div>
 
-<p id="callout">
-Only two remote holes in the default install, in a heck of a long time!
+<div class="wrap">
+<section class="section" aria-labelledby="why">
+<h2 id="why">Why OpenBSD</h2>
+<p class="sub">Four priorities drive every release.</p>
+<ul class="grid-4">
+<li class="card"><h3>Proactive security</h3><p>Audits, privilege separation, <a href="security.html">exploit mitigations</a> by default.</p>
+<li class="card"><h3>Correctness</h3><p>Careful code, strict standards compliance, readable style.</p>
+<li class="card"><h3>Portability</h3><p>Runs on <a href="plat.html">many hardware platforms</a>, one source tree.</p>
+<li class="card"><h3>Cryptography</h3><p><a href="crypto.html">Integrated crypto</a>: LibreSSL, OpenSSH, signify.</p>
+</ul>
+</section>
 
-<p>
-The OpenBSD project produces a <strong>FREE</strong>,
-multi-platform 4.4BSD-based UNIX-like operating system.
-Our efforts emphasize portability, standardization, correctness,
-<a href="security.html">proactive security</a> and
-<a href="crypto.html">integrated cryptography</a>.  As an example of the
-effect OpenBSD has, the popular <a href="https://www.openssh.com">OpenSSH</a>
-software comes from OpenBSD.
+<section class="section" aria-labelledby="current-release">
+<h2 id="current-release">Current release</h2>
+<p class="sub">Get it, patch it, follow it.</p>
+<div class="release">
+<div class="card">
+<h3>OpenBSD 7.9</h3>
+<p>Released May 19, 2026. See the <a href="79.html">release page</a> and the
+<a href="plus79.html">detailed change log</a>.</p>
+<ul class="meta-list">
+<li>Mirrors: <code>pub/OpenBSD/7.9/</code> — see <a href="ftp.html">the FTP page</a>
+<li>Bugs &amp; fixes: <a href="errata79.html">7.9 errata</a>
+<li>Binary updates (<a href="https://man.openbsd.org/syspatch">syspatch(8)</a>): amd64, i386, arm64
+</ul>
+</div>
+<div class="card">
+<h3>Follow development</h3>
+<p>Track <a href="plus.html">-current changes</a>, run
+<a href="stable.html">-stable</a>, or upgrade with
+<a href="faq/upgrade79.html">the 7.9 upgrade guide</a>.</p>
+<ul class="meta-list">
+<li><a href="anoncvs.html">AnonCVS</a> · <a href="https://cvsweb.openbsd.org/">CVSWeb</a>
+<li><a href="https://github.com/openbsd">GitHub mirror</a> · <a href="https://openbsd.gothub.org">GotHub mirror</a>
+</ul>
+</div>
+</div>
+</section>
 
-<p>
-OpenBSD is freely available from our download sites.
+<section class="section" aria-labelledby="resources">
+<h2 id="resources">Resources</h2>
+<p class="sub">Everything from the classic site, reorganized.</p>
+<ul class="grid-3">
+<li class="card"><h3>Documentation</h3><p><a href="faq/index.html">FAQ</a> · <a href="https://man.openbsd.org">Manual pages</a> · <a href="faq/pf/index.html">PF guide</a> · <a href="report.html">Report a bug</a></p>
+<li class="card"><h3>Project</h3><p><a href="goals.html">Goals</a> · <a href="innovations.html">Innovations</a> · <a href="events.html">Events &amp; papers</a> · <a href="hackathons.html">Hackathons</a></p>
+<li class="card"><h3>Community</h3><p><a href="mail.html">Mailing lists</a> · <a href="groups.html">User groups</a> · <a href="support.html">Commercial support</a> · <a href="lyrics.html">Songs</a> &amp; <a href="artwork.html">artwork</a> · <a href="https://openbsdstore.com/">Art merchandise</a></p>
+</ul>
+</section>
 
-<p>
-The current release is
-<a href="79.html">OpenBSD 7.9</a>, released May 19, 2026.
-This is the 60th release.
-
-<p>
-OpenBSD is developed entirely by volunteers.
-The project's development environment
-and <a href="hackathons.html">developer events</a>
-are funded through contributions collected by
+<section class="section" aria-labelledby="funding">
+<div class="funding">
+<div>
+<h2 id="funding">Developed entirely by volunteers.</h2>
+<p>Development and hackathons are funded through
 <a href="https://www.openbsdfoundation.org">The OpenBSD Foundation</a>.
-Contributions ensure that OpenBSD will remain a vibrant and
-<a href="policy.html">free</a> operating system.
+Contributions keep OpenBSD vibrant and <a href="policy.html">free</a>.</p>
+</div>
+<a class="btn btn-primary" href="donations.html">Donate</a>
+</div>
+</section>
 
-</article>
+<section class="section" aria-labelledby="assoc">
+<h2 id="assoc">Associated projects</h2>
+<p class="sub">Software born from OpenBSD.</p>
+<ul class="pills">
+<li><a href="https://www.openssh.com">OpenSSH</a>
+<li><a href="https://www.openbgpd.org">OpenBGPD</a>
+<li><a href="https://www.rpki-client.org">rpki-client</a>
+<li><a href="https://www.openntpd.org">OpenNTPD</a>
+<li><a href="https://www.opensmtpd.org">OpenSMTPD</a>
+<li><a href="https://www.openiked.org">OpenIKED</a>
+<li><a href="https://mandoc.bsd.lv">mandoc</a>
+<li><a href="https://www.libressl.org">LibreSSL</a>
+</ul>
+</section>
+</div>
 </main>
 
-<footer>
-<figure>
-	<a href="images/rack2009.jpg">
-	<img width="60" height="90" src="images/rack2009-s.png" alt="rack"></a>
-</figure>
-<aside>
-
-<hr>
-Associated projects:
-<a href="https://www.openssh.com">OpenSSH</a>,
-<a href="https://www.openbgpd.org">OpenBGPD</a>,
-<a href="https://www.rpki-client.org">rpki-client</a>,
-<a href="https://www.openntpd.org">OpenNTPD</a>,
-<a href="https://www.opensmtpd.org">OpenSMTPD</a>,
-<a href="https://www.openiked.org">OpenIKED</a>,
-<a href="https://mandoc.bsd.lv">mandoc</a>,
-<a href="https://www.libressl.org">LibreSSL</a>
-
-</aside>
+<footer class="site-footer">
+<div class="wrap">
+<span>© 1997–2026 Theo de Raadt.</span>
+<nav aria-label="Footer">
+<a href="goals.html">Goals</a>
+<a href="plat.html">Platforms</a>
+<a href="security.html">Security</a>
+<a href="images/rack2009.jpg">Server rack</a>
+<a href="donations.html">Donations</a>
+</nav>
+</div>
 </footer>
