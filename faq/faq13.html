@@ -9,6 +9,7 @@
 <meta charset=utf-8>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../modern.css">
+<script>(function(){try{var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);}catch(e){}})();document.addEventListener("DOMContentLoaded",function(){var b=document.querySelector(".theme-toggle");if(!b)return;function isDark(){var d=document.documentElement.getAttribute("data-theme");return d?d==="dark":matchMedia("(prefers-color-scheme: dark)").matches;}function paint(){var k=isDark();b.textContent=k?"\u25d1":"\u25d0";b.setAttribute("aria-pressed",k);}b.addEventListener("click",function(){var n=isDark()?"light":"dark";try{localStorage.setItem("theme",n);}catch(e){}document.documentElement.setAttribute("data-theme",n);paint();});paint();});</script>
 <link rel="canonical" href="https://www.openbsd.org/faq/faq13.html">
 <style>
 table {
@@ -51,6 +52,7 @@ PERFORMANCE OF THIS DOCUMENTATION
 <a href="../plus.html">Changelog</a>
 <a href="../manuals.html">Manuals</a>
 <a class="cta" href="https://www.openbsdfoundation.org/donations.html">Donate</a>
+<button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle color theme" title="Toggle dark mode">◐</button>
 </nav>
 </div>
 </header>
@@ -1090,6 +1092,21 @@ there are a number of options in packages, including
 <a href="https://streamlink.github.io/">streamlink</a>
 and <a href="https://rg3.github.io/youtube-dl/">youtube-dl</a>.
 XXX -->
+
+<h2 id="bluetooth">Bluetooth</h2>
+
+<p>
+Current OpenBSD releases do not support Bluetooth.
+Up to OpenBSD 5.5, the system shipped a Bluetooth protocol stack covering
+the HCI, L2CAP, RFCOMM and SCO protocols, as documented in
+<a href="https://man.openbsd.org/OpenBSD-5.4/bluetooth.4">bluetooth(4)</a>.
+Supported hardware included USB dongles
+(<a href="https://man.openbsd.org/OpenBSD-5.4/ubt.4">ubt(4)</a>) and
+human interface devices such as keyboards
+(<a href="https://man.openbsd.org/OpenBSD-5.4/btkbd.4">btkbd(4)</a>) and mice
+(<a href="https://man.openbsd.org/OpenBSD-5.4/btms.4">btms(4)</a>).
+Support was removed in OpenBSD 5.6 because the code did not work properly
+(see the <a href="../plus56.html">5.6 changelog</a>).
 </div>
 </main>
 

@@ -6,6 +6,7 @@
 <meta name="description" content="OpenBSD 4.6">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="modern.css">
+<script>(function(){try{var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s);}catch(e){}})();document.addEventListener("DOMContentLoaded",function(){var b=document.querySelector(".theme-toggle");if(!b)return;function isDark(){var d=document.documentElement.getAttribute("data-theme");return d?d==="dark":matchMedia("(prefers-color-scheme: dark)").matches;}function paint(){var k=isDark();b.textContent=k?"\u25d1":"\u25d0";b.setAttribute("aria-pressed",k);}b.addEventListener("click",function(){var n=isDark()?"light":"dark";try{localStorage.setItem("theme",n);}catch(e){}document.documentElement.setAttribute("data-theme",n);paint();});paint();});</script>
 <link rel="canonical" href="https://www.openbsd.org/46.html">
 
 <a class="skip" href="#main">Skip to content</a>
@@ -19,6 +20,7 @@
 <a href="plus.html">Changelog</a>
 <a href="manuals.html">Manuals</a>
 <a class="cta" href="https://www.openbsdfoundation.org/donations.html">Donate</a>
+<button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle color theme" title="Toggle dark mode">◐</button>
 </nav>
 </div>
 </header>

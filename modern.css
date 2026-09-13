@@ -487,10 +487,49 @@ code {
 	.site-nav { margin-left: 0; }
 }
 
-/* Dark mode */
+/* Theme toggle */
+
+.theme-toggle {
+	font: inherit;
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: var(--fg);
+	background: transparent;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	padding: 8px 12px;
+	margin-left: 4px;
+	cursor: pointer;
+	white-space: nowrap;
+}
+.theme-toggle:hover { background: var(--card); }
+
+/* Dark mode: explicit choice (html[data-theme]) wins, otherwise OS preference */
+
+html[data-theme="dark"] {
+	--bg: #14161a;
+	--fg: #eef0f3;
+	--muted: #a9b2bd;
+	--line: #2a2f37;
+	--card: #1c2026;
+	--accent: #6aa9e8;
+	--accent-dark: #9fc8ff;
+	--blue: #8fc1ff;
+	--blue-dark: #c4dcff;
+	--red: #6aa9e8;
+	--green: #20b700;
+}
+html[data-theme="dark"] .site-header { background: rgba(20, 22, 26, 0.92); }
+html[data-theme="dark"] .badge { background: #16222e; border-color: #2c4a63; color: #9fc8ff; }
+html[data-theme="dark"] .btn-ghost { background: transparent; }
+html[data-theme="dark"] .release .card, html[data-theme="dark"] .pills a { background: var(--card); }
+html[data-theme="dark"] .funding { background: #000; border: 1px solid var(--line); }
+html[data-theme="dark"] .hero-art img { background: var(--card); }
+html[data-theme="dark"]#project-main nav,
+html[data-theme="dark"]#project-main figure { background-color: #123843; border-color: #1e5a73; }
 
 @media (prefers-color-scheme: dark) {
-	:root {
+	html:not([data-theme="light"]) {
 		--bg: #14161a;
 		--fg: #eef0f3;
 		--muted: #a9b2bd;
@@ -503,10 +542,12 @@ code {
 		--red: #6aa9e8;
 		--green: #20b700;
 	}
-	.site-header { background: rgba(20, 22, 26, 0.92); }
-	.badge { background: #16222e; border-color: #2c4a63; color: #9fc8ff; }
-	.btn-ghost { background: transparent; }
-	.release .card, .pills a { background: var(--card); }
-	.funding { background: #000; border: 1px solid var(--line); }
-	.hero-art img { background: var(--card); }
+	html:not([data-theme="light"]) .site-header { background: rgba(20, 22, 26, 0.92); }
+	html:not([data-theme="light"]) .badge { background: #16222e; border-color: #2c4a63; color: #9fc8ff; }
+	html:not([data-theme="light"]) .btn-ghost { background: transparent; }
+	html:not([data-theme="light"]) .release .card, html:not([data-theme="light"]) .pills a { background: var(--card); }
+	html:not([data-theme="light"]) .funding { background: #000; border: 1px solid var(--line); }
+	html:not([data-theme="light"]) .hero-art img { background: var(--card); }
+	html:not([data-theme="light"])#project-main nav,
+	html:not([data-theme="light"])#project-main figure { background-color: #123843; border-color: #1e5a73; }
 }
